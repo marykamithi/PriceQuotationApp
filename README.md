@@ -1,0 +1,1 @@
+The application provides a simple interface for users to input a subtotal and discount percentage, calculates the discount amount and total price, and displays the results. It includes form validation to ensure the inputs are within acceptable ranges.
