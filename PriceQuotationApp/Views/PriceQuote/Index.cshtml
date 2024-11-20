@@ -1,0 +1,30 @@
+﻿@model PriceQuotationApp.Models.PriceQuoteModel
+
+<h2>Price Quotation</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Subtotal:</label>
+        <input asp-for="Subtotal" />
+        <span asp-validation-for="Subtotal" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Discount percent:</label>
+        <input asp-for="DiscountPercent" />
+        <span asp-validation-for="DiscountPercent" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Discount amount:</label>
+        <span>@Model.DiscountAmount.ToString("C")</span>
+    </div>
+    <div>
+        <label>Total:</label>
+        <span>@Model.Total.ToString("C")</span>
+    </div>
+    <button type="submit">Calculate</button>
+    <a asp-action="Clear">Clear</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
